@@ -1,0 +1,314 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Oct 14 10:05:06 2022
+# Process ID: 5700
+# Current directory: E:/xintu_work/ram/ram_ip/ram_ip.runs/synth_1
+# Command line: vivado.exe -log ram_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ram_top.tcl
+# Log file: E:/xintu_work/ram/ram_ip/ram_ip.runs/synth_1/ram_top.vds
+# Journal file: E:/xintu_work/ram/ram_ip/ram_ip.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ram_top.tcl -notrace
+Command: synth_design -top ram_top -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2100 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 481.625 ; gain = 106.641
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ram_top' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:23]
+	Parameter WD_WIDTH bound to: 8 - type: integer 
+	Parameter WA_DEPTH bound to: 4096 - type: integer 
+	Parameter RD_WIDTH bound to: 4 - type: integer 
+	Parameter DELAY bound to: 0 - type: integer 
+	Parameter MODE bound to: read_first - type: string 
+	Parameter TYPE bound to: block - type: string 
+	Parameter WA_WIDTH bound to: 12 - type: integer 
+	Parameter RA_DEPTH bound to: 8192 - type: integer 
+	Parameter RA_WIDTH bound to: 13 - type: integer 
+	Parameter ADDRMAX_WIDTH bound to: 13 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'tdp_ram_ip' [E:/xintu_work/ram/ram_ip/ram_ip.runs/synth_1/.Xil/Vivado-5700-DESKTOP-7AAJRE5/realtime/tdp_ram_ip_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'tdp_ram_ip' (1#1) [E:/xintu_work/ram/ram_ip/ram_ip.runs/synth_1/.Xil/Vivado-5700-DESKTOP-7AAJRE5/realtime/tdp_ram_ip_stub.v:6]
+WARNING: [Synth 8-689] width (13) of port connection 'addra' does not match port width (12) of module 'tdp_ram_ip' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:57]
+WARNING: [Synth 8-689] width (13) of port connection 'addrb' does not match port width (12) of module 'tdp_ram_ip' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:63]
+INFO: [Synth 8-4471] merging register 'we_reg' into 'en_reg' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:56]
+WARNING: [Synth 8-6014] Unused sequential element we_reg was removed.  [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'ram_top' (2#1) [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 537.043 ; gain = 162.059
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout[3] with 1st driver pin 'your_instance_name/douta[3]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout[3] with 2nd driver pin 'your_instance_name/doutb[3]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout[2] with 1st driver pin 'your_instance_name/douta[2]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout[2] with 2nd driver pin 'your_instance_name/doutb[2]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout[1] with 1st driver pin 'your_instance_name/douta[1]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout[1] with 2nd driver pin 'your_instance_name/doutb[1]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout[0] with 1st driver pin 'your_instance_name/douta[0]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout[0] with 2nd driver pin 'your_instance_name/doutb[0]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        4|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 537.043 ; gain = 162.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 537.043 ; gain = 162.059
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/ip/tdp_ram_ip/tdp_ram_ip/tdp_ram_ip_in_context.xdc] for cell 'your_instance_name'
+Finished Parsing XDC File [e:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/ip/tdp_ram_ip/tdp_ram_ip/tdp_ram_ip_in_context.xdc] for cell 'your_instance_name'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1002.488 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1002.488 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1002.488 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1002.488 ; gain = 627.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1002.488 ; gain = 627.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for your_instance_name. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1002.488 ; gain = 627.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1002.488 ; gain = 627.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ram_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1002.488 ; gain = 627.504
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1007.801 ; gain = 632.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1007.875 ; gain = 632.891
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.949 ; gain = 642.965
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.949 ; gain = 642.965
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_OBUF[3] with 1st driver pin 'your_instance_name/douta[3]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_OBUF[3] with 2nd driver pin 'your_instance_name/doutb[3]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_OBUF[2] with 1st driver pin 'your_instance_name/douta[2]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_OBUF[2] with 2nd driver pin 'your_instance_name/doutb[2]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_OBUF[1] with 1st driver pin 'your_instance_name/douta[1]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_OBUF[1] with 2nd driver pin 'your_instance_name/doutb[1]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_OBUF[0] with 1st driver pin 'your_instance_name/douta[0]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_OBUF[0] with 2nd driver pin 'your_instance_name/doutb[0]' [E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v:53]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        4|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.949 ; gain = 642.965
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.949 ; gain = 642.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.949 ; gain = 642.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.949 ; gain = 642.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.949 ; gain = 642.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |tdp_ram_ip    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |tdp_ram_ip |     1|
+|2     |BUFG       |     1|
+|3     |CARRY4     |     3|
+|4     |LUT1       |     2|
+|5     |LUT2       |     2|
+|6     |LUT3       |     2|
+|7     |LUT4       |     1|
+|8     |LUT5       |     1|
+|9     |LUT6       |     2|
+|10    |FDRE       |    21|
+|11    |IBUF       |     2|
+|12    |OBUF       |     4|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    49|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.949 ; gain = 642.965
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 8 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1017.949 ; gain = 177.520
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1017.949 ; gain = 642.965
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1041.578 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 3 Warnings, 16 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1041.625 ; gain = 678.168
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1041.625 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/xintu_work/ram/ram_ip/ram_ip.runs/synth_1/ram_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ram_top_utilization_synth.rpt -pb ram_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 14 10:05:26 2022...

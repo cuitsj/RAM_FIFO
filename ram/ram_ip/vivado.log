@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Oct 14 09:59:34 2022
+# Process ID: 9844
+# Current directory: E:/xintu_work/ram/ram_ip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1056 E:\xintu_work\ram\ram_ip\ram_ip.xpr
+# Log file: E:/xintu_work/ram/ram_ip/vivado.log
+# Journal file: E:/xintu_work/ram/ram_ip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/xintu_work/ram/ram_ip/ram_ip.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/ip/sdp_ram_ip/sdp_ram_ip.xci]
+set_property is_enabled false [get_files  E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/ip/sp_ram_ip/sp_ram_ip.xci]
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Write_Width_A {8} CONFIG.Write_Depth_A {2048} CONFIG.Read_Width_A {4} CONFIG.Write_Width_B {8} CONFIG.Read_Width_B {4} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {false}] [get_ips tdp_ram_ip]
+generate_target all [get_files  E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/ip/tdp_ram_ip/tdp_ram_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'tdp_ram_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'tdp_ram_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'tdp_ram_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'tdp_ram_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'tdp_ram_ip'...
+catch { config_ip_cache -export [get_ips -all tdp_ram_ip] }
+export_ip_user_files -of_objects [get_files E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/ip/tdp_ram_ip/tdp_ram_ip.xci] -no_script -sync -force -quiet
+reset_run tdp_ram_ip_synth_1
+launch_runs -jobs 10 tdp_ram_ip_synth_1
+[Fri Oct 14 10:02:08 2022] Launched tdp_ram_ip_synth_1...
+Run output will be captured here: E:/xintu_work/ram/ram_ip/ram_ip.runs/tdp_ram_ip_synth_1/runme.log
+export_simulation -of_objects [get_files E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/ip/tdp_ram_ip/tdp_ram_ip.xci] -directory E:/xintu_work/ram/ram_ip/ram_ip.ip_user_files/sim_scripts -ip_user_files_dir E:/xintu_work/ram/ram_ip/ram_ip.ip_user_files -ipstatic_source_dir E:/xintu_work/ram/ram_ip/ram_ip.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/xintu_work/ram/ram_ip/ram_ip.cache/compile_simlib/modelsim} {questa=E:/xintu_work/ram/ram_ip/ram_ip.cache/compile_simlib/questa} {riviera=E:/xintu_work/ram/ram_ip/ram_ip.cache/compile_simlib/riviera} {activehdl=E:/xintu_work/ram/ram_ip/ram_ip.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+file mkdir E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new
+close [ open E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v w ]
+add_files E:/xintu_work/ram/ram_ip/ram_ip.srcs/sources_1/new/ram_ip_top.v
+launch_runs impl_1 -jobs 10
+[Fri Oct 14 10:05:06 2022] Launched synth_1...
+Run output will be captured here: E:/xintu_work/ram/ram_ip/ram_ip.runs/synth_1/runme.log
+[Fri Oct 14 10:05:06 2022] Launched impl_1...
+Run output will be captured here: E:/xintu_work/ram/ram_ip/ram_ip.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 14 11:27:34 2022...

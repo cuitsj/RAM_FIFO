@@ -1,0 +1,2 @@
+tdp_ram_ip.v,verilog,xil_defaultlib,../../../../ram_ip.srcs/sources_1/ip/tdp_ram_ip/sim/tdp_ram_ip.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

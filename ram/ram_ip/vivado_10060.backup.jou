@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Oct 10 17:22:24 2022
+# Process ID: 10060
+# Current directory: E:/xintu_work/ram/ram_ip
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17152 E:\xintu_work\ram\ram_ip\ram_ip.xpr
+# Log file: E:/xintu_work/ram/ram_ip/vivado.log
+# Journal file: E:/xintu_work/ram/ram_ip\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/xintu_work/ram/ram_ip/ram_ip.xpr
+update_compile_order -fileset sources_1

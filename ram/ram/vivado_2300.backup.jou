@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Oct 10 18:25:48 2022
+# Process ID: 2300
+# Current directory: E:/xintu_work/ram/ram
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2588 E:\xintu_work\ram\ram\ram.xpr
+# Log file: E:/xintu_work/ram/ram/vivado.log
+# Journal file: E:/xintu_work/ram/ram\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/xintu_work/ram/ram/ram.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+set_property is_enabled false [get_files  E:/xintu_work/ram/ram/ram.srcs/sim_1/new/sp_ram_tb.v]
+set_property is_enabled false [get_files  E:/xintu_work/ram/ram/ram.srcs/sim_1/new/sdp_ram_tb.v]
+set_property is_enabled false [get_files  E:/xintu_work/ram/ram/ram.srcs/sim_1/new/tdp_ram_tb.v]
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1

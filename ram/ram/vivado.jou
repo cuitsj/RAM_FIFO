@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Oct 20 11:07:58 2022
+# Process ID: 3600
+# Current directory: E:/xintu_work/ram/ram
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11444 E:\xintu_work\ram\ram\ram.xpr
+# Log file: E:/xintu_work/ram/ram/vivado.log
+# Journal file: E:/xintu_work/ram/ram\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/xintu_work/ram/ram/ram.xpr
+update_compile_order -fileset sources_1
+set_property is_enabled true [get_files  E:/xintu_work/ram/ram/ram.srcs/sources_1/new/tdp_ram.v]
+update_compile_order -fileset sources_1
+set_property is_enabled true [get_files  E:/xintu_work/ram/ram/ram.srcs/sources_1/new/ram_top.v]
+set_property is_enabled false [get_files  E:/xintu_work/ram/ram/ram.srcs/sources_1/new/tdp_ram.v]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+refresh_design
+create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports clk]
+file mkdir E:/xintu_work/ram/ram/ram.srcs/constrs_1/new
+close [ open E:/xintu_work/ram/ram/ram.srcs/constrs_1/new/port_constraints.xdc w ]
+add_files -fileset constrs_1 E:/xintu_work/ram/ram/ram.srcs/constrs_1/new/port_constraints.xdc
+set_property target_constrs_file E:/xintu_work/ram/ram/ram.srcs/constrs_1/new/port_constraints.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+reset_run impl_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+refresh_design
+set_property is_enabled true [get_files  E:/xintu_work/ram/ram/ram.srcs/sources_1/new/tdp_ram.v]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  E:/xintu_work/ram/ram/ram.srcs/sources_1/new/sp_ram.v]
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+refresh_design
